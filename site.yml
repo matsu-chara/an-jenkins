@@ -1,0 +1,9 @@
+---
+- name: install nginx_with_oreore_ssl
+  hosts: dev-server
+  # user: vagrant
+  sudo : yes
+  roles:
+    - iptables
+    - nginx_with_oreore_ssl
+    - jenkins

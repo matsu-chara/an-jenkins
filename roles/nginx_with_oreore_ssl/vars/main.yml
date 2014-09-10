@@ -1,0 +1,4 @@
+---
+conf_dir: /etc/nginx/conf.d
+ssl_dir: /etc/nginx
+htpasswd_dir: /etc/nginx

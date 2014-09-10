@@ -1,0 +1,4 @@
+---
+- name: iptables config
+  template: src=iptables.j2 dest={{iptables_dir}}/iptables
+  notify: restart iptables
