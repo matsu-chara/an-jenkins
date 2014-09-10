@@ -133,4 +133,16 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
       spec.pattern = 'spec/default/*_spec.rb'
     end
   end
+
+  if Vagrant.has_plugin?("vagrant-cachier")
+    config.cache.scope = :box
+  end
+
+  if Vagrant.has_plugin?("vagrant-vbguest")
+    config.vbguest.auto_update = false
+  end
+
+  if Vagrant.has_plugin?("vagrant-pushover")
+    # config.pushover.read_key
+  end
 end
