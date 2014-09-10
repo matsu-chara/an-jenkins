@@ -139,7 +139,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   if Vagrant.has_plugin?("vagrant-vbguest")
-    config.vbguest.auto_update = false
+    # config.vbguest.auto_update = false
   end
 
   if Vagrant.has_plugin?("vagrant-pushover")
