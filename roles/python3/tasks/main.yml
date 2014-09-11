@@ -15,4 +15,5 @@
 
 - name: install pip
   shell: curl -kL https://raw.github.com/pypa/pip/master/contrib/get-pip.py | sudo /usr/local/bin/python3
-  creates: /usr/local/bin/pip3
+  args:
+    creates: /usr/local/bin/pip3

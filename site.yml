@@ -4,7 +4,7 @@
   # user: vagrant
   sudo : yes
   roles:
-    - iptables
-    - nginx_with_oreore_ssl
-    - jenkins
+    # - iptables
+    # - nginx_with_oreore_ssl
+    # - jenkins
     - python3
