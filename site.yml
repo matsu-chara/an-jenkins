@@ -7,3 +7,4 @@
     - iptables
     - nginx_with_oreore_ssl
     - jenkins
+    - python3
