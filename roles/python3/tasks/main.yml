@@ -1,0 +1,18 @@
+- name: get source
+  get_url: url=http://python.org/ftp/python/{{ version }}/Python-{{ version }}.tgz dest={{ src }}
+
+- name: unarchive source
+  command: tar zxvf Python-{{ version }}.tgz chdir={{ src }} creates={{ src }}/Python-{{ version }}
+
+- name: make & install
+  shell: |
+    ./configure
+    make
+    make install
+  args:
+    chdir: "{{ src }}/Python-{{ version }}"
+    creates: /usr/local/bin/python3
+
+- name: install pip
+  shell: curl -kL https://raw.github.com/pypa/pip/master/contrib/get-pip.py | sudo /usr/local/bin/python3
+  creates: /usr/local/bin/pip3
