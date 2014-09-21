@@ -4,5 +4,5 @@
 - name: install pip dependency
   shell: |
     /usr/local/bin/pip3 install -r /home/vagrant/requirements.txt
-    args:
-      creates: /usr/local/lib/python3.3/site-packages/requests
+  args:
+    creates: /usr/local/lib/python3.3/site-packages/requests
